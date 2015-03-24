@@ -13,7 +13,7 @@ def func(circ_size, start_per, num_skip):
     people.reverse()
     for i in people:
         current = Node(i + 1, current)
-    last.nxt = current
+    last.nxt = current  # Here is where the linked list gets turned into a circle
     while current.val != start_per:
         current = current.nxt
     while current.nxt != current:
